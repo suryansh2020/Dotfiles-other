@@ -2,7 +2,7 @@ symlink_to_home =                           \
     if test -e ~/$(file); then                  \
         echo "Warning: ~/$(file) already exists";       \
     else                                \
-        ln -s ~/dotfiles/$(file) ~/$(file);         \
+        ln -s ~/Dotfiles-other/$(file) ~/$(file);         \
     fi;
 
 remove_if_symlink =                         \
@@ -14,7 +14,7 @@ remove_if_symlink =                         \
         fi;                         \
     fi;
 
-candidates = .gitconfig .tmux.conf .irbrc .vimrc .gvimrc
+candidates = .gitconfig .tmux.conf .irbrc .vimrc .gvimrc .zshrc .oh-my.zsh
 
 all::
     @$(foreach file,$(candidates),$(symlink_to_home))
