@@ -14,7 +14,15 @@ remove_if_symlink =                         \
         fi;                         \
     fi;
 
-candidates = .gitconfig .tmux.conf .irbrc .zshrc .jshintrc .wgetrc
+candidates = .gitconfig \
+			 .tmux.conf \
+			 .irbrc     \
+			 .wgetrc    \
+			 .zshrc     \
+			 .jshintrc  \
+			 .i3status.conf \
+			 .i3        \
+			 .oh-my-zsh
 
 all::
     @$(foreach file,$(candidates),$(symlink_to_home))
