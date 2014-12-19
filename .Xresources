@@ -1,0 +1,96 @@
+! General
+URxvt.termName:         xterm-256color
+URxvt.depth:            32
+URxvt.geometry:         90x30
+URxvt.transparent:      false
+URxvt.loginShell:       true
+URxvt.saveLines:        0
+URxvt.scrollBar:        false
+URxvt.scrollStyle:      rxvt
+URxvt.secondaryScreen:  1
+URxvt.secondaryScroll:  0
+URxvt.internalBorder:   3
+URxvt.lineSpace:        0
+!
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+!
+! Extensions
+URxvt.perl-lib:        /usr/lib/urxvt/perl/
+URxvt.perl-ext-common: default,searchable-scrollback
+URxvt.matcher.button:  1
+!  - catch ugly URLs
+!  - url-select
+URxvt.perl-ext-common: ...,url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher:     google-chrome-beta
+URxvt.url-select.underline: true
+!  - clipboard
+URxvt.perl-ext-common: ...,clipboard
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+
+! Appearance
+URxvt*font: xft:Monospace:pixelsize=12
+URxvt*boldFont: xft:Monospace:pixelsize=12
+!   - Fix font space
+URxvt*letterSpace: -1
+!
+! ----[ Xft settings ]----
+!
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+!
+! ----[ Solarized Colors ]----
+! https://github.com/solarized/xresources/blob/master/solarized
+
+URxvt.intensityStyles: false
+
+! Solarized color scheme for the X Window System
+!
+! Source http://github.com/altercation/solarized
+ 
+*background: #fdf6e3
+*foreground: #839496
+
+*fading: 40
+*fadeColor: #fdf6e3
+*cursorColor: #586e75
+*pointerColorBackground: #93a1a1
+*pointerColorForeground: #586e75
+ 
+!! black dark/light
+*color0: #eee8d5
+*color8: #fdf6e3
+ 
+!! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+ 
+!! green dark/light
+*color2: #859900
+*color10: #93a1a1
+ 
+!! yellow dark/light
+*color3: #b58900
+*color11: #839496
+ 
+!! blue dark/light
+*color4: #268bd2
+*color12: #657b83
+ 
+!! magenta dark/light
+*color5: #d33682
+*color13: #6c71c4
+ 
+!! cyan dark/light
+*color6: #2aa198
+*color14: #586e75
+ 
+!! white dark/light
+*color7: #073642
+*color15: #002b36
