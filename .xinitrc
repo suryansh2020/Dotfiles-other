@@ -7,14 +7,21 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
         unset f
 fi
 
+userresources=$HOME/.Xresources
+usermodmap=$HOME/.Xmodmap
+
 # update X resources database
-xrdb -merge ~/.Xresources
+if [ -f $userresources ]; then
+    xrdb -merge $userresources
+fi
 
-# run terminal
-exec urxvt
-
-# swap caps lock and control key
-xmodmap ~/dotfiles-other/.speedswapper
+# update default key mappings
+if [ -f $usermodmap ]; then
+    xmodmap $usermodmap
+fi
 
 # run window manager
+# see [1] for a nice explanation of .xinitrc
 exec i3
+
+# [1]: http://fluxbox.sourceforge.net/docbook/en/html/app-setup.html
