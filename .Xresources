@@ -1,5 +1,5 @@
 ! General
-URxvt.termName:         xterm-256color
+URxvt.termName:         screen-256color
 URxvt.depth:            32
 URxvt.geometry:         90x30
 URxvt.transparent:      false
@@ -17,23 +17,21 @@ URxvt.iso14755_52: false
 !
 ! Extensions
 URxvt.perl-lib:        /usr/lib/urxvt/perl/
-URxvt.perl-ext-common: default,searchable-scrollback
+URxvt.perl-ext-common: default,searchable-scrollback,url-select,clipboard
 URxvt.matcher.button:  1
 !  - catch ugly URLs
 !  - url-select
-URxvt.perl-ext-common: ...,url-select
 URxvt.keysym.M-u: perl:url-select:select_next
-URxvt.url-select.launcher:     google-chrome-beta
+URxvt.url-select.launcher:     google-chrome-unstable
 URxvt.url-select.underline: true
 !  - clipboard
-URxvt.perl-ext-common: ...,clipboard
 URxvt.keysym.M-c:   perl:clipboard:copy
 URxvt.keysym.M-v:   perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 
 ! Appearance
-URxvt*font: xft:Monospace:pixelsize=12
-URxvt*boldFont: xft:Monospace:pixelsize=12
+URxvt*font: xft:Inconsolata:pixelsize=14
+URxvt*boldFont: xft:Inconsolata:pixelsize=14
 !   - Fix font space
 URxvt*letterSpace: -1
 !
@@ -45,52 +43,162 @@ Xft.rgba:                   rgb
 Xft.hinting:                true
 Xft.hintstyle:              hintslight
 !
-! ----[ Solarized Colors ]----
-! https://github.com/solarized/xresources/blob/master/solarized
-
 URxvt.intensityStyles: false
 
-! Solarized color scheme for the X Window System
-!
-! Source http://github.com/altercation/solarized
- 
-*background: #fdf6e3
-*foreground: #839496
+!! Tomorrow Night
+!!
+!urxvt*foreground: #cccccc
+!urxvt*background: #2d2d2d
 
-*fading: 40
-*fadeColor: #fdf6e3
-*cursorColor: #586e75
-*pointerColorBackground: #93a1a1
-*pointerColorForeground: #586e75
- 
-!! black dark/light
-*color0: #eee8d5
-*color8: #fdf6e3
- 
-!! red dark/light
-*color1: #dc322f
-*color9: #cb4b16
- 
-!! green dark/light
-*color2: #859900
-*color10: #93a1a1
- 
-!! yellow dark/light
-*color3: #b58900
-*color11: #839496
- 
-!! blue dark/light
-*color4: #268bd2
-*color12: #657b83
- 
-!! magenta dark/light
-*color5: #d33682
-*color13: #6c71c4
- 
-!! cyan dark/light
-*color6: #2aa198
-*color14: #586e75
- 
-!! white dark/light
-*color7: #073642
-*color15: #002b36
+!*.cursorColor:  #aeafad
+
+!! Black / Grey
+!*.color0:       #000000
+!*.color8:       #666666
+
+!! Red / Bright Red
+!*.color1:       #f2777a
+!*.color9:       #FF3334
+
+!! Green + Bright Green
+!*.color2:       #99cc99
+!*.color10:      #9ec400
+
+!! Yellow (Orange) + Bright Yellow (Yellow)
+!*.color3:       #f99157
+!*.color11:      #ffcc66
+
+!! Blue + Bright Blue
+!*.color4:       #6699cc
+!*.color12:      #6699cc
+
+!! Magenta (Purple) + Bright Magenta
+!*.color5:       #cc99cc
+!*.color13:      #b777e0
+
+!! Cyan (Aqua) + Bright Cyan
+!*.color6:       #66cccc
+!*.color14:      #54ced6
+
+!! Light Grey (Selection) + White (Current Line)
+!*.color7:       #515151
+!*.color15:      #393939
+!
+!!-- Tomorrow
+
+!*foreground:   #4d4d4c
+!*background:   #fafafa
+!! CursorColor (Selection)
+!*cursorColor:  #d6d6d6
+
+!! Black + Grey (Comment)
+!*color0:       #000000
+!*color8:       #8e908c
+!! Red + Bright Red
+!*color1:       #c82829
+!*color9:       #ff3334
+!! Green + Bright Green
+!*color2:       #718c00
+!*color10:      #9ec400
+!! Yellow (Orange) + Bright Yellow (Yellow)
+!*color3:       #f5871f
+!*color11:      #eab700
+!! Blue + Bright Blue
+!*color4:       #4271ae
+!*color12:      #5795e6
+!! Magenta (Purple) + Bright Magenta
+!*color5:       #8959a8
+!*color13:      #b777e0
+!! Cyan (Aqua) + Bright Cyan
+!*color6:       #3e999f
+!*color14:      #54ced6
+!! Light Grey (Selection) + White (Current Line)
+!*color7:       #d6d6d6
+!*color15:      #efefef
+
+!!!---- URxvt (Solarized, 12px)
+!!!---- activate using urxvt -name LURxvt
+!!
+!LURxvt*fading:            0
+!LURxvt*color0:      #424242
+!LURxvt*color1:      #ba3b38
+!LURxvt*color10:     #79ab87
+!LURxvt*color11:     #f7d58a
+!LURxvt*color12:     #98c6ef
+!LURxvt*color13:     #e499b2
+!LURxvt*color14:     #579e9a
+!LURxvt*color15:     #f4f2eb
+!LURxvt*color2:      #5d865f
+!LURxvt*color3:      #a8814a
+!LURxvt*color4:      #88afd4
+!LURxvt*color5:      #cc5985
+!LURxvt*color6:      #376360
+!LURxvt*color7:      #d0cfca
+!LURxvt*color8:      #5d5d5d
+!LURxvt*color9:      #e9605f
+!LURxvt*background:  #eeeeee
+!LURxvt*foreground:  #444444
+!LURxvt*cursorColor: #000000
+
+!!!---- URxvt (Solarized Dark, 12px)
+!!
+!URxvt*background:                     #002b36
+!URxvt*foreground:                     #657b83
+!URxvt*cursorColor:                    #93a1a1
+!URxvt*pointerColorBackground:         #586e75
+!URxvt*pointerColorForeground:         #93a1a1
+!URxvt*colorUL:                        #859900
+!URxvt*colorBD:                        #268bd2
+!URxvt*color0:                         #073642
+!URxvt*color8:                         #002b36
+!URxvt*color1:                         #dc322f
+!URxvt*color9:                         #cb4b16
+!URxvt*color2:                         #859900
+!URxvt*color10:                        #586e75
+!URxvt*color3:                         #b58900
+!URxvt*color11:                        #657b83
+!URxvt*color4:                         #268bd2
+!URxvt*color12:                        #839496
+!URxvt*color5:                         #d33682
+!URxvt*color13:                        #6c71c4
+!URxvt*color6:                         #2aa198
+!URxvt*color14:                        #93a1a1
+!URxvt*color7:                         #eee8d5
+!URxvt*color15:                        #fdf6e3
+
+!TomorrowNightEighties
+*.foreground:   #cccccc
+*.background:   #2d2d2d
+*.cursorColor:  #aeafad
+
+! Black / Grey
+*.color0:       #000000
+*.color8:       #666666
+
+! Red / Bright Red
+*.color1:       #f2777a
+*.color9:       #FF3334
+
+! Green + Bright Green
+*.color2:       #99cc99
+*.color10:      #9ec400
+
+! Yellow (Orange) + Bright Yellow (Yellow)
+*.color3:       #f99157
+*.color11:      #ffcc66
+
+! Blue + Bright Blue
+*.color4:       #6699cc
+*.color12:      #6699cc
+
+! Magenta (Purple) + Bright Magenta
+*.color5:       #cc99cc
+*.color13:      #b777e0
+
+! Cyan (Aqua) + Bright Cyan
+*.color6:       #66cccc
+*.color14:      #54ced6
+
+! Light Grey (Selection) + White (Current Line)
+*.color7:       #515151
+*.color15:      #393939

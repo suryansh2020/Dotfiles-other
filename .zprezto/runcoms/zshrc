@@ -1,0 +1,39 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+##
+## Custom
+##
+
+alias browse="google-chrome-unstable"
+alias psudo='sudo env PATH="$PATH"'
+alias o="gvim -p --remote-tab-silent"
+alias zshrc="gvim ~/.zshrc"
+
+# rbenv init
+#eval "$(rbenv init -)"
+#
+
+export PATH=$HOME/.cabal/bin:$PATH
+export PATH=$PATH:/usr/lib/postgresql/9.3/bin
+export PATH=$HOME/.ncbi-blast-2.2.30+/bin:$HOME/.rbenv/bin:$PATH
+
+#PATH=$HOME/.gem/bin:$PATH
+#GEM_HOME=$HOME/.gem
+#GEM_PATH=$HOME/.gem
+
+# TexLive exports
+export MANPATH=/usr/local/texlive/2013/texmf/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2013/texmf/doc/info:$INFOPATH
+
+# For DrRacket
+export PATH="/usr/racket/bin:$PATH"

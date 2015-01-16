@@ -1,96 +1,52 @@
 [user]
-    name  = Vivek Rai
-    email = vivekraiiitkgp@gmail.com
+    name                    = Vivek Rai
+    email                   = vivekraiiitkgp@gmail.com
 [core]
-    whitespace = trailing-space,space-before-tab
-        editor = vim
-    autocrlf   = input
-[alias]
-    alias        = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || git config --get-regexp \"alias.*\" | colrm 1 6 | sed \"s/[ ]/ = /\" >&2 && exit 0' -"
-    a            = add
-    ap           = add -p
-    ;abbr = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
-    d            = diff
-    ds           = diff --staged
-    l            = log -p --stat
-    lg           = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-    sl = shortlog -ns --no-merges
-    s = status -sb
-    sh = show
-    c = clone
-    co = checkout
-    cob = checkout -b
-    ci = commit -s
-    cp = cherry-pick
-    cpa = cherry-pick --abort
-    cpc = cherry-pick --continue
-    cps = cherry-pick --skip
-    graph = log --graph --decorate --pretty=oneline --abbrev-commit
-    review = log -p --reverse master..
-    fixup        = !sh -c 'git commit -m \"fixup! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-    squash       = !sh -c 'git commit -m \"squash! $(git log -1 --format='\\''%s'\\'' $@)\"' -
-    r = reset
-    rh = reset --hard
-    re = rebase
-    ri = rebase --interactive
-    rc = rebase --continue
-    ra = rebase --abort
-    rs = rebase --skip
-    p = push
-    pf = push -f
-    f = fetch
-    pu = pull
-    b = blame -M -CCC
-    bD = branch -D
-    bM = branch -M
-    br = branch -v -v
-    bra = branch -a
-    m = merge
-    rp = rev-parse
-    rems = remote show -n
-    rema = remote add
-    remr = remote rm
-    remp = remote prune
-    remn = rename rename
-    su = remote set-url
+    whitespace              = trailing-space,space-before-tab
+        editor              = vim
+    autocrlf                = input
 [color]
-    ui = auto
+    ui                      = auto
 [branch]
-    autosetuprebase = always
+    autosetuprebase         = always
 [status]
-    short = true
-    branch = true
+    short                   = true
+    branch                  = true
 [diff]
-    submodule = log
+    submodule               = log
 [log]
-    date = relative
+    date                    = relative
 [merge]
-    conflictstyle = diff3
-    log = true
-    tool = gvimdiff
+    conflictstyle           = diff3
+    log                     = true
+    tool                    = gvimdiff
 [rerere]
     enabled
     autoupdate
 [blame]
-    date = relative
-    blankboundary = true
-    showroot = true
+    date                    = relative
+    blankboundary           = true
+    showroot                = true
 [grep]
-    lineNumber = true
+    lineNumber              = true
 [pack]
-    threads = 0
-    usebitmaps = true
+    threads                 = 0
+    usebitmaps              = true
 [pull]
-    rebase = true
+    rebase                  = true
 [rebase]
-    autosquash = true
-    autostash = true
+    autosquash              = true
+    autostash               = true
 [push]
-    default = current
+    default                 = current
 [url "https://github.com/"]
-    insteadOf = gh:
+    insteadOf               = gh:
 [credential]
-    helper = cache --timeout=259200
+    helper                  = cache --timeout                                                                                = 259200
 [format]
-    signoff = true
-    coverLetter = auto
+    signoff                 = true
+    coverLetter             = auto
+[http]
+    proxy                   = http://10.3.100.207:8080
+[https]
+    proxy                   = https://10.3.100.207:8080
