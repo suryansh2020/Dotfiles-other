@@ -22,6 +22,7 @@ fi
 
 # run window manager
 # see [1] for a nice explanation of .xinitrc
+exec xautolock -time 10 -locker '/home/.i3/i3lock-wrapper' &
 exec i3
 
 # [1]: http://fluxbox.sourceforge.net/docbook/en/html/app-setup.html
