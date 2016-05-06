@@ -1,0 +1,54 @@
+[user]
+    name                    = Vivek Rai
+    email                   = vivekrai.iitkgp@gmail.com
+[core]
+    whitespace              = trailing-space,space-before-tab
+        editor              = vim
+    autocrlf                = input
+[color]
+    ui                      = auto
+[branch]
+    autosetuprebase         = always
+[status]
+    short                   = true
+    branch                  = true
+[diff]
+    submodule               = log
+[merge]
+    conflictstyle           = diff3
+    log                     = true
+    tool                    = gvimdiff
+[rerere]
+    enabled
+    autoupdate
+[blame]
+    date                    = relative
+    blankboundary           = true
+    showroot                = true
+[grep]
+    lineNumber              = true
+[pack]
+    threads                 = 0
+    usebitmaps              = true
+[pull]
+    rebase                  = true
+[rebase]
+    autosquash              = true
+    autostash               = true
+[push]
+    default                 = current
+[url "https://github.com/"]
+    insteadOf               = gh:
+[credential]
+    helper                  = cache --timeout 259200
+[format]
+    signoff                 = true
+    coverLetter             = auto
+[http]
+    proxy                   = http://10.3.100.207:8080/
+[https]
+    proxy                   = https://10.3.100.207:8080/
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

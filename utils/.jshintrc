@@ -1,0 +1,16 @@
+{
+  "asi"     : true,
+  "browser" : true,
+  "eqeqeq"  : true,
+  "immed"   : true,
+  "jquery"  : true,
+  "latedef" : true,
+  "newcap"  : true,
+  "noarg"   : true,
+  "loopfunc" : true,
+  "noarg"   : true,
+  "node"    : true,
+  "strict"  : false,
+  "undef"   : true,
+  "unused"  : true
+}
